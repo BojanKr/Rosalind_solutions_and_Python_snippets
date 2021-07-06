@@ -12,6 +12,8 @@ def main():
 
 def count_nucleotides(sequence):
 
+    """ Counts nucleotides in a DNA sequence """
+
     nucleotides = ['A', 'C', 'G', 'T']
     c = {}
 
