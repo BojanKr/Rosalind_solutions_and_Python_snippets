@@ -1,9 +1,13 @@
-import os
+""" Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
+
+    Return: The Hamming distance dH(s,t). """
 
 
 def main():
 
-    with open(os.path.join(os.getcwd(), '6_rosalind_hamm.txt')) as f:
+    dataset = input('Path to dataset: ')
+
+    with open(dataset, 'r') as f:
         content = f.readlines()
         sequence_1 = content[0].strip()
         sequence_2 = content[1].strip()
@@ -17,6 +21,8 @@ def main():
 
 
 def compare_sequences(sequence_1, sequence_2, miss, hit):
+
+    """ Compares two sequences to find the Hamming distance """
 
     result = ''
     diff = 0
