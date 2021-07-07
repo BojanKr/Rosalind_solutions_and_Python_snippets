@@ -12,6 +12,7 @@ def main():
 
     m = shared_motif(dataset)
 
+    # Print the largest common motif
     print(max(m, key=len))
 
 
@@ -34,6 +35,7 @@ def shared_motif(dataset):
         if len(el) < 3:
             motifs.remove(el)
 
+    # Search for all common motifs and store them in a list
     for m in motifs:
         if all(m in s for s in seq_list):
             motif_list.append(m)
