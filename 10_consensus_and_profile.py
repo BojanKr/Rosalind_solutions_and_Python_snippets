@@ -3,9 +3,7 @@
     Return: A consensus string and profile matrix for the collection.
     (If several possible consensus strings exist, then you may return any one of them.) """
 
-import os
 from Bio import SeqIO
-import numpy as np
 import pandas as pd
 
 def main():
