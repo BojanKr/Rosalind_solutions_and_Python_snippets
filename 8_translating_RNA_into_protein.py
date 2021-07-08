@@ -1,15 +1,14 @@
-""" Given: An RNA string s
+""" Given: An RNA string s corresponding to a strand of mRNA (of length at most 10 kbp).
 
-corresponding to a strand of mRNA (of length at most 10 kbp).
+    Return: The protein string encoded by s. """
 
-Return: The protein string encoded by s. """
-
-import os
 from Bio.Seq import Seq
 
 def main():
 
-    with open(os.path.join(os.getcwd(), '8_rosalind_prot.txt')) as f:
+    dataset = input('Path to dataset: ')
+
+    with open(dataset, 'r') as f:
         sequence = f.read()
 
     mrna_seq = Seq(sequence)
