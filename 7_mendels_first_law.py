@@ -4,11 +4,12 @@
     Return: The probability that two randomly selected mating organisms will produce an individual possessing a
     dominant allele (and thus displaying the dominant phenotype). Assume that any two organisms can mate. """
 
-import os
 
 def main():
 
-    with open(os.path.join(os.getcwd(), '7_rosalind_iprb.txt')) as f:
+    dataset = input('Path to dataset: ')
+
+    with open(dataset, 'r') as f:
         content = f.read().split()
         k = int(content[0])
         m = int(content[1])
