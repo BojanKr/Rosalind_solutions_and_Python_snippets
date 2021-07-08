@@ -4,13 +4,13 @@
     Return: All locations of t
     as a substring of s. """
 
-import os
 import re
-
 
 def main():
 
-    with open(os.path.join(os.getcwd(), '9_rosalind_subs.txt')) as f:
+    dataset = input('Path to dataset: ')
+
+    with open(dataset, 'r') as f:
         content = f.readlines()
         dna = content[0].strip()
         motif = content[1].strip()
@@ -19,6 +19,7 @@ def main():
     motif_positions = [x + 1 for x in motif_scan(dna_seq=dna, motif=motif)]
 
     print(' '.join(str(num) for num in motif_positions))
+
 
 def motif_scan(dna_seq, motif):
 
